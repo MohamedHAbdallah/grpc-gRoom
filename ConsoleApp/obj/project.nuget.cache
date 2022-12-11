@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jLB5MorJ4ysmFWkub1l7rY2Il5DUJn6gk1cWV1g9GFhO/B62emaoQlOBY3mFTbpCyUjSEIgQqQmBnE8v/xNOXQ==",
+  "success": true,
+  "projectFilePath": "E:\\gRPC\\protoBuffers\\demo\\ConsoleApp\\ConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mohamed.hassan.abdal\\.nuget\\packages\\google.protobuf\\3.21.11\\google.protobuf.3.21.11.nupkg.sha512",
+    "C:\\Users\\mohamed.hassan.abdal\\.nuget\\packages\\grpc.tools\\2.51.0\\grpc.tools.2.51.0.nupkg.sha512"
+  ],
+  "logs": []
+}

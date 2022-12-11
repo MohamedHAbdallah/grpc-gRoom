@@ -1,0 +1,17 @@
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\ConsoleApp.csproj.AssemblyReference.cache
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\ConsoleApp.AssemblyInfoInputs.cache
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\ConsoleApp.AssemblyInfo.cs
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\ConsoleApp.csproj.CoreCompileInputs.cache
+E:\gRPC\protoBuffers\demo\ConsoleApp\bin\Debug\net7.0\ConsoleApp.exe
+E:\gRPC\protoBuffers\demo\ConsoleApp\bin\Debug\net7.0\ConsoleApp.deps.json
+E:\gRPC\protoBuffers\demo\ConsoleApp\bin\Debug\net7.0\ConsoleApp.runtimeconfig.json
+E:\gRPC\protoBuffers\demo\ConsoleApp\bin\Debug\net7.0\ConsoleApp.dll
+E:\gRPC\protoBuffers\demo\ConsoleApp\bin\Debug\net7.0\ConsoleApp.pdb
+E:\gRPC\protoBuffers\demo\ConsoleApp\bin\Debug\net7.0\Google.Protobuf.dll
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\ConsoleApp.csproj.CopyComplete
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\ConsoleApp.dll
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\refint\ConsoleApp.dll
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\ConsoleApp.pdb
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\ConsoleApp.genruntimeconfig.cache
+E:\gRPC\protoBuffers\demo\ConsoleApp\obj\Debug\net7.0\ref\ConsoleApp.dll
