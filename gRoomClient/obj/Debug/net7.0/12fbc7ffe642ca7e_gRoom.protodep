@@ -1,2 +1,0 @@
-obj\Debug\net7.0\Protos/GRoom.cs \
-obj\Debug\net7.0\Protos/GRoomGrpc.cs: Protos/gRoom.proto
