@@ -1,3 +1,0 @@
-obj\Debug\net7.0\Protos/GRoom.cs \
-obj\Debug\net7.0\Protos/GRoomGrpc.cs: C:/Users/mohamed.hassan.abdal/.nuget/packages/grpc.tools/2.49.0/build/native/include/google/protobuf/timestamp.proto\
- Protos/gRoom.proto
