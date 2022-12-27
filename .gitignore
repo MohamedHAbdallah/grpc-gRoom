@@ -1,0 +1,12 @@
+# Ignore .vs File
+.vs
+
+# Ignore .vscode File
+.vscode
+
+# Ignore node_modules folder
+node_modules
+
+# Ignore any files in /bin and /obj Folders
+**/bin/*
+**/obj/*
