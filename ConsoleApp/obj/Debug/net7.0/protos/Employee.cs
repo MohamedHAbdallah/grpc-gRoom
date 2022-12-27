@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Hr.Entities {
+namespace Grpc.Course.Protobuf.Test {
 
   /// <summary>Holder for reflection information generated from protos/employee.proto</summary>
   public static partial class EmployeeReflection {
@@ -25,22 +25,23 @@ namespace Hr.Entities {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVwcm90b3MvZW1wbG95ZWUucHJvdG8SC2hyLmVudGl0aWVzGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIswCCghFbXBsb3llZRIKCgJpZBgB",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvItkCCghFbXBsb3llZRIKCgJpZBgB",
             "IAEoBRISCgpmaXJzdF9uYW1lGAIgASgJEhEKCWxhc3RfbmFtZRgDIAEoCRIS",
-            "Cgppc19yZXRpcmVkGAQgASgIEi4KCmJpcnRoX2RhdGUYBSABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEi0KD2N1cnJlbnRfYWRkcmVzcxgGIAEo",
-            "CzIULmhyLmVudGl0aWVzLkFkZHJlc3MSGgoScHJldmlvdXNfZW1wbG95ZXJz",
-            "GAcgAygJEjsKDm1hcml0YWxfc3RhdHVzGAggASgOMiMuaHIuZW50aXRpZXMu",
-            "RW1wbG95ZWUuTWFyaXRhbFN0YXR1cyJBCg1NYXJpdGFsU3RhdHVzEgoKBlNJ",
-            "TkdMRRAAEgsKB01BUlJJRUQQARIMCghESVZPUkNFRBACEgkKBU9USEVSEAMi",
-            "VAoHQWRkcmVzcxITCgtzdHJlZXRfbmFtZRgBIAEoCRIUCgxob3VzZV9udW1i",
-            "ZXIYAiABKAUSDAoEY2l0eRgDIAEoCRIQCgh6aXBfY29kZRgEIAEoCWIGcHJv",
-            "dG8z"));
+            "Cgppc19yZXRpcmVkGAQgASgIEgsKA2FnZRgFIAEoBRIuCgpiaXJ0aF9kYXRl",
+            "GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCg9jdXJyZW50",
+            "X2FkZHJlc3MYByABKAsyFC5oci5lbnRpdGllcy5BZGRyZXNzEhoKEnByZXZp",
+            "b3VzX2VtcGxveWVycxgIIAMoCRI7Cg5tYXJpdGFsX3N0YXR1cxgJIAEoDjIj",
+            "LmhyLmVudGl0aWVzLkVtcGxveWVlLk1hcml0YWxTdGF0dXMiQQoNTWFyaXRh",
+            "bFN0YXR1cxIKCgZTSU5HTEUQABILCgdNQVJSSUVEEAESDAoIRElWT1JDRUQQ",
+            "AhIJCgVPVEhFUhADIlQKB0FkZHJlc3MSEwoLc3RyZWV0X25hbWUYASABKAkS",
+            "FAoMaG91c2VfbnVtYmVyGAIgASgFEgwKBGNpdHkYAyABKAkSEAoIemlwX2Nv",
+            "ZGUYBCABKAlCHKoCGUdycGMuQ291cnNlLlByb3RvYnVmLlRlc3RiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Hr.Entities.Employee), global::Hr.Entities.Employee.Parser, new[]{ "Id", "FirstName", "LastName", "IsRetired", "BirthDate", "CurrentAddress", "PreviousEmployers", "MaritalStatus" }, null, new[]{ typeof(global::Hr.Entities.Employee.Types.MaritalStatus) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Hr.Entities.Address), global::Hr.Entities.Address.Parser, new[]{ "StreetName", "HouseNumber", "City", "ZipCode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Course.Protobuf.Test.Employee), global::Grpc.Course.Protobuf.Test.Employee.Parser, new[]{ "Id", "FirstName", "LastName", "IsRetired", "Age", "BirthDate", "CurrentAddress", "PreviousEmployers", "MaritalStatus" }, null, new[]{ typeof(global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Course.Protobuf.Test.Address), global::Grpc.Course.Protobuf.Test.Address.Parser, new[]{ "StreetName", "HouseNumber", "City", "ZipCode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -65,7 +66,7 @@ namespace Hr.Entities {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Hr.Entities.EmployeeReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Grpc.Course.Protobuf.Test.EmployeeReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -89,6 +90,7 @@ namespace Hr.Entities {
       firstName_ = other.firstName_;
       lastName_ = other.lastName_;
       isRetired_ = other.isRetired_;
+      age_ = other.age_;
       birthDate_ = other.birthDate_ != null ? other.birthDate_.Clone() : null;
       currentAddress_ = other.currentAddress_ != null ? other.currentAddress_.Clone() : null;
       previousEmployers_ = other.previousEmployers_.Clone();
@@ -150,8 +152,20 @@ namespace Hr.Entities {
       }
     }
 
+    /// <summary>Field number for the "age" field.</summary>
+    public const int AgeFieldNumber = 5;
+    private int age_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Age {
+      get { return age_; }
+      set {
+        age_ = value;
+      }
+    }
+
     /// <summary>Field number for the "birth_date" field.</summary>
-    public const int BirthDateFieldNumber = 5;
+    public const int BirthDateFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp birthDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -163,11 +177,11 @@ namespace Hr.Entities {
     }
 
     /// <summary>Field number for the "current_address" field.</summary>
-    public const int CurrentAddressFieldNumber = 6;
-    private global::Hr.Entities.Address currentAddress_;
+    public const int CurrentAddressFieldNumber = 7;
+    private global::Grpc.Course.Protobuf.Test.Address currentAddress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Hr.Entities.Address CurrentAddress {
+    public global::Grpc.Course.Protobuf.Test.Address CurrentAddress {
       get { return currentAddress_; }
       set {
         currentAddress_ = value;
@@ -175,9 +189,9 @@ namespace Hr.Entities {
     }
 
     /// <summary>Field number for the "previous_employers" field.</summary>
-    public const int PreviousEmployersFieldNumber = 7;
+    public const int PreviousEmployersFieldNumber = 8;
     private static readonly pb::FieldCodec<string> _repeated_previousEmployers_codec
-        = pb::FieldCodec.ForString(58);
+        = pb::FieldCodec.ForString(66);
     private readonly pbc::RepeatedField<string> previousEmployers_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Leave empty if unknown
@@ -189,11 +203,11 @@ namespace Hr.Entities {
     }
 
     /// <summary>Field number for the "marital_status" field.</summary>
-    public const int MaritalStatusFieldNumber = 8;
-    private global::Hr.Entities.Employee.Types.MaritalStatus maritalStatus_ = global::Hr.Entities.Employee.Types.MaritalStatus.Single;
+    public const int MaritalStatusFieldNumber = 9;
+    private global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus maritalStatus_ = global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus.Single;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Hr.Entities.Employee.Types.MaritalStatus MaritalStatus {
+    public global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus MaritalStatus {
       get { return maritalStatus_; }
       set {
         maritalStatus_ = value;
@@ -219,6 +233,7 @@ namespace Hr.Entities {
       if (FirstName != other.FirstName) return false;
       if (LastName != other.LastName) return false;
       if (IsRetired != other.IsRetired) return false;
+      if (Age != other.Age) return false;
       if (!object.Equals(BirthDate, other.BirthDate)) return false;
       if (!object.Equals(CurrentAddress, other.CurrentAddress)) return false;
       if(!previousEmployers_.Equals(other.previousEmployers_)) return false;
@@ -234,10 +249,11 @@ namespace Hr.Entities {
       if (FirstName.Length != 0) hash ^= FirstName.GetHashCode();
       if (LastName.Length != 0) hash ^= LastName.GetHashCode();
       if (IsRetired != false) hash ^= IsRetired.GetHashCode();
+      if (Age != 0) hash ^= Age.GetHashCode();
       if (birthDate_ != null) hash ^= BirthDate.GetHashCode();
       if (currentAddress_ != null) hash ^= CurrentAddress.GetHashCode();
       hash ^= previousEmployers_.GetHashCode();
-      if (MaritalStatus != global::Hr.Entities.Employee.Types.MaritalStatus.Single) hash ^= MaritalStatus.GetHashCode();
+      if (MaritalStatus != global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus.Single) hash ^= MaritalStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -272,17 +288,21 @@ namespace Hr.Entities {
         output.WriteRawTag(32);
         output.WriteBool(IsRetired);
       }
+      if (Age != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Age);
+      }
       if (birthDate_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteMessage(BirthDate);
       }
       if (currentAddress_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(58);
         output.WriteMessage(CurrentAddress);
       }
       previousEmployers_.WriteTo(output, _repeated_previousEmployers_codec);
-      if (MaritalStatus != global::Hr.Entities.Employee.Types.MaritalStatus.Single) {
-        output.WriteRawTag(64);
+      if (MaritalStatus != global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus.Single) {
+        output.WriteRawTag(72);
         output.WriteEnum((int) MaritalStatus);
       }
       if (_unknownFields != null) {
@@ -311,17 +331,21 @@ namespace Hr.Entities {
         output.WriteRawTag(32);
         output.WriteBool(IsRetired);
       }
+      if (Age != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Age);
+      }
       if (birthDate_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteMessage(BirthDate);
       }
       if (currentAddress_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(58);
         output.WriteMessage(CurrentAddress);
       }
       previousEmployers_.WriteTo(ref output, _repeated_previousEmployers_codec);
-      if (MaritalStatus != global::Hr.Entities.Employee.Types.MaritalStatus.Single) {
-        output.WriteRawTag(64);
+      if (MaritalStatus != global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus.Single) {
+        output.WriteRawTag(72);
         output.WriteEnum((int) MaritalStatus);
       }
       if (_unknownFields != null) {
@@ -346,6 +370,9 @@ namespace Hr.Entities {
       if (IsRetired != false) {
         size += 1 + 1;
       }
+      if (Age != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Age);
+      }
       if (birthDate_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BirthDate);
       }
@@ -353,7 +380,7 @@ namespace Hr.Entities {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurrentAddress);
       }
       size += previousEmployers_.CalculateSize(_repeated_previousEmployers_codec);
-      if (MaritalStatus != global::Hr.Entities.Employee.Types.MaritalStatus.Single) {
+      if (MaritalStatus != global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus.Single) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MaritalStatus);
       }
       if (_unknownFields != null) {
@@ -380,6 +407,9 @@ namespace Hr.Entities {
       if (other.IsRetired != false) {
         IsRetired = other.IsRetired;
       }
+      if (other.Age != 0) {
+        Age = other.Age;
+      }
       if (other.birthDate_ != null) {
         if (birthDate_ == null) {
           BirthDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -388,12 +418,12 @@ namespace Hr.Entities {
       }
       if (other.currentAddress_ != null) {
         if (currentAddress_ == null) {
-          CurrentAddress = new global::Hr.Entities.Address();
+          CurrentAddress = new global::Grpc.Course.Protobuf.Test.Address();
         }
         CurrentAddress.MergeFrom(other.CurrentAddress);
       }
       previousEmployers_.Add(other.previousEmployers_);
-      if (other.MaritalStatus != global::Hr.Entities.Employee.Types.MaritalStatus.Single) {
+      if (other.MaritalStatus != global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus.Single) {
         MaritalStatus = other.MaritalStatus;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -427,26 +457,30 @@ namespace Hr.Entities {
             IsRetired = input.ReadBool();
             break;
           }
-          case 42: {
+          case 40: {
+            Age = input.ReadInt32();
+            break;
+          }
+          case 50: {
             if (birthDate_ == null) {
               BirthDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(BirthDate);
             break;
           }
-          case 50: {
+          case 58: {
             if (currentAddress_ == null) {
-              CurrentAddress = new global::Hr.Entities.Address();
+              CurrentAddress = new global::Grpc.Course.Protobuf.Test.Address();
             }
             input.ReadMessage(CurrentAddress);
             break;
           }
-          case 58: {
+          case 66: {
             previousEmployers_.AddEntriesFrom(input, _repeated_previousEmployers_codec);
             break;
           }
-          case 64: {
-            MaritalStatus = (global::Hr.Entities.Employee.Types.MaritalStatus) input.ReadEnum();
+          case 72: {
+            MaritalStatus = (global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus) input.ReadEnum();
             break;
           }
         }
@@ -480,26 +514,30 @@ namespace Hr.Entities {
             IsRetired = input.ReadBool();
             break;
           }
-          case 42: {
+          case 40: {
+            Age = input.ReadInt32();
+            break;
+          }
+          case 50: {
             if (birthDate_ == null) {
               BirthDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(BirthDate);
             break;
           }
-          case 50: {
+          case 58: {
             if (currentAddress_ == null) {
-              CurrentAddress = new global::Hr.Entities.Address();
+              CurrentAddress = new global::Grpc.Course.Protobuf.Test.Address();
             }
             input.ReadMessage(CurrentAddress);
             break;
           }
-          case 58: {
+          case 66: {
             previousEmployers_.AddEntriesFrom(ref input, _repeated_previousEmployers_codec);
             break;
           }
-          case 64: {
-            MaritalStatus = (global::Hr.Entities.Employee.Types.MaritalStatus) input.ReadEnum();
+          case 72: {
+            MaritalStatus = (global::Grpc.Course.Protobuf.Test.Employee.Types.MaritalStatus) input.ReadEnum();
             break;
           }
         }
@@ -538,7 +576,7 @@ namespace Hr.Entities {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Hr.Entities.EmployeeReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Grpc.Course.Protobuf.Test.EmployeeReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

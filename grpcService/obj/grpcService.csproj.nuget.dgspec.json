@@ -51,6 +51,10 @@
             "Grpc.AspNetCore.Server.Reflection": {
               "target": "Package",
               "version": "[2.50.0, )"
+            },
+            "google.protobuf": {
+              "target": "Package",
+              "version": "[3.21.12, )"
             }
           },
           "imports": [
@@ -72,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
