@@ -2,7 +2,7 @@ syntax="proto3";
 
 option csharp_namespace="gRoom.grpc.Messages";
 
-package gRoomServer;
+package gRoomClient;
 
 message RoomRegistrationRequest
 {
