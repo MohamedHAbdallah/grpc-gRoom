@@ -8,9 +8,5 @@
 node_modules
 
 # Ignore any files in /bin and /obj Folders
-*.suo
-*.user
-_ReSharper.*
-bin
-obj
-packages
+**/obj/
+**/bin/
