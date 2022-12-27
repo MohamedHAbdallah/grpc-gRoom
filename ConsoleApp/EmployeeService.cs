@@ -1,7 +1,8 @@
 using System;
-//using Google.Protobuf.Examples;  //for person.proto
 using Google.Protobuf;
-using Hr.Entities;
+
+using Grpc.Course.Protobuf.Test;
+
 public class EmployeeService
 {
     private Employee emp = new Employee();

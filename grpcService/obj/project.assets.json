@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "Google.Protobuf/3.21.5": {
+      "Google.Protobuf/3.21.12": {
         "type": "package",
         "compile": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -348,14 +348,14 @@
     }
   },
   "libraries": {
-    "Google.Protobuf/3.21.5": {
-      "sha512": "d7zwRm0edg2cxqRynMD31F8HUUyicBT0l5M74EIsU6GAaq3dxxaZ/PpSPlso010W9nIXoVVKUYZSsiOspAOO/A==",
+    "Google.Protobuf/3.21.12": {
+      "sha512": "1TXWxQy0PDDM1NC/LojlX4YVh7NhOvvyriCfERzeUVTp0XNXv8mo/AyWxDYCvMQ9xRZHUVdWoE4/B8ridP8Btg==",
       "type": "package",
-      "path": "google.protobuf/3.21.5",
+      "path": "google.protobuf/3.21.12",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.21.5.nupkg.sha512",
+        "google.protobuf.3.21.12.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -823,7 +823,8 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Grpc.AspNetCore >= 2.49.0",
-      "Grpc.AspNetCore.Server.Reflection >= 2.50.0"
+      "Grpc.AspNetCore.Server.Reflection >= 2.50.0",
+      "google.protobuf >= 3.21.12"
     ]
   },
   "packageFolders": {
@@ -877,6 +878,10 @@
           "Grpc.AspNetCore.Server.Reflection": {
             "target": "Package",
             "version": "[2.50.0, )"
+          },
+          "google.protobuf": {
+            "target": "Package",
+            "version": "[3.21.12, )"
           }
         },
         "imports": [
@@ -898,7 +903,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
