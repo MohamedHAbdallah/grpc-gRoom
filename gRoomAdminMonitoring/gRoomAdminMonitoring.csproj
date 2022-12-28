@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
+<ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.21.12" />
     <PackageReference Include="Grpc.Net.Client" Version="2.50.0" />
     <PackageReference Include="Grpc.Tools" Version="2.51.0">
@@ -18,7 +18,8 @@
 
 
 <ItemGroup>
-    <Protobuf Include="Protos\RoomRegistration\room-registeration.messages.proto" GrpcServices="None" ProtoRoot="Protos\RoomRegistration\"  />
-    <Protobuf Include="Protos\RoomRegistration\room-registeration.services.proto" GrpcServices="Client" ProtoRoot="Protos\RoomRegistration" />
+     <Protobuf Include="Protos\Monitoring\monitoring.messages.proto"  GrpcServices="None" ProtoRoot="Protos\Monitoring\" />
+    <Protobuf Include="Protos\Monitoring\monitoring.services.proto" GrpcServices="Client" ProtoRoot="Protos\Monitoring\" />
   </ItemGroup>
+
 </Project>

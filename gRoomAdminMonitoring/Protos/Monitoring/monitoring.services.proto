@@ -1,0 +1,12 @@
+syntax="proto3";
+
+option csharp_namespace="Protos.Monitoring";
+
+package Protos.Monitoring;
+
+import "google/protobuf/empty.proto";
+import "monitoring.messages.proto";
+
+service MonitoringServiceDef{
+    rpc StartMonitoring(google.protobuf.Empty) returns(stream RecievedMessageDef);
+}

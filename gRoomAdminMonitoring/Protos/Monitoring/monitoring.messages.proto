@@ -1,0 +1,11 @@
+syntax="proto3";
+
+package  Protos.Monitoring;
+
+import "google/protobuf/timestamp.proto";
+
+message RecievedMessageDef{
+    google.protobuf.Timestamp msg_time = 1;
+    string contents = 2;
+    string user = 3; 
+}

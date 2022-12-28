@@ -1,0 +1,14 @@
+syntax="proto3";
+
+option csharp_namespace="Protos.FlashBot";
+
+package Protos.FlashBot;
+
+import "flashBot.messages.proto";
+
+service FlashBotServiceDef{
+    rpc SendNewsFlash(stream NewsFlashMsgDef) returns(NewsStreamResponseMsgDef);
+}
+
+
+

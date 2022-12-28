@@ -2,23 +2,25 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.21.12" />
-    <PackageReference Include="Grpc.Net.Client" Version="2.50.0" />
-    <PackageReference Include="Grpc.Tools" Version="2.51.0">
+    <PackageReference Include="Google.Protobuf" Version="3.21.5" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.48.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.48.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-
-
-<ItemGroup>
+  <ItemGroup>
     <Protobuf Include="Protos\RoomRegistration\room-registeration.messages.proto" GrpcServices="None" ProtoRoot="Protos\RoomRegistration\"  />
     <Protobuf Include="Protos\RoomRegistration\room-registeration.services.proto" GrpcServices="Client" ProtoRoot="Protos\RoomRegistration" />
+
+    <Protobuf Include="Protos\Chat\chat.messages.proto"  GrpcServices="None" ProtoRoot="Protos\Chat\" />
+    <Protobuf Include="Protos\Chat\chat.services.proto" GrpcServices="Client" ProtoRoot="Protos\Chat\" />
   </ItemGroup>
+
 </Project>

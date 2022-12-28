@@ -1,0 +1,12 @@
+syntax="proto3";
+
+package  Protos.Chat;
+
+import "google/protobuf/timestamp.proto";
+
+message ChatMessageDef{
+    google.protobuf.Timestamp msg_time = 1;
+    string contents=2;
+    string user=3;
+    string room=4;
+}

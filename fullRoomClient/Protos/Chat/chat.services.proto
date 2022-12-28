@@ -1,0 +1,11 @@
+syntax="proto3";
+
+option csharp_namespace="Protos.Chat";
+
+package Protos.Chat;
+
+import "chat.messages.proto";
+
+service ChatServiceDef{
+    rpc StartChat(stream ChatMessageDef) returns(stream ChatMessageDef);
+}

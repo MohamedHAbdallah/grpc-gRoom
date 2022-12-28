@@ -7,8 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
-    <Protobuf Include="Protos\gRoom.proto" GrpcServices="Server" />
+  
+    <Protobuf Include="Protos\RoomRegistration\room-registeration.messages.proto" GrpcServices="None" ProtoRoot="Protos\RoomRegistration\"  />
+    <Protobuf Include="Protos\RoomRegistration\room-registeration.services.proto" GrpcServices="Server" ProtoRoot="Protos\RoomRegistration" />
+
+    <Protobuf Include="Protos\FlashBot\flashBot.messages.proto"  GrpcServices="None" ProtoRoot="Protos\FlashBot\" />
+    <Protobuf Include="Protos\FlashBot\flashBot.services.proto" GrpcServices="Server" ProtoRoot="Protos\FlashBot\" />
+
+    <Protobuf Include="Protos\Monitoring\monitoring.messages.proto"  GrpcServices="None" ProtoRoot="Protos\Monitoring\" />
+    <Protobuf Include="Protos\Monitoring\monitoring.services.proto" GrpcServices="Server" ProtoRoot="Protos\Monitoring\" />
+
+    <Protobuf Include="Protos\Chat\chat.messages.proto"  GrpcServices="None" ProtoRoot="Protos\Chat\" />
+    <Protobuf Include="Protos\Chat\chat.services.proto" GrpcServices="Server" ProtoRoot="Protos\Chat\" />
+
   </ItemGroup>
 
   <ItemGroup>

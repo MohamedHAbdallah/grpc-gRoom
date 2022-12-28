@@ -1,4 +1,3 @@
-using grpcService.Services;
 using gRoom.grpc.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,8 +14,11 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 // Configure the HTTP request pipeline.
-app.MapGrpcService<GreeterService>();
-app.MapGrpcService<GRoomService>();
+app.MapGrpcService<RoomRegistrationService>();
+app.MapGrpcService<FlashBotService>();
+app.MapGrpcService<MonitoringService>();
+app.MapGrpcService<ChatService>();
+
 app.MapGrpcReflectionService();
 
 app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");

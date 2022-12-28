@@ -1,0 +1,24 @@
+syntax="proto3";
+
+package Protos.FlashBot;
+
+import "google/protobuf/timestamp.proto";
+
+message NewsFlashMsgDef
+{
+    google.protobuf.Timestamp news_time = 1;
+    string news_item=2;
+}
+
+message NewsStreamResponseMsgDef{
+    bool success = 1;
+    string message =2;
+}
+
+
+service FlashBotServiceDef{
+    rpc SendNewsFlash(stream NewsFlashMsgDef) returns(NewsStreamResponseMsgDef);
+}
+
+
+

@@ -1,0 +1,14 @@
+syntax="proto3";
+
+option csharp_namespace="Protos.RoomRegistration";
+
+package Protos.RoomRegistration;
+
+import "room-registeration.messages.proto";
+
+service RoomRegistrationServiceDef{
+    rpc RegisterationToRoom(RoomRegistrationRequestMsgDef) returns(RoomRegistrationResponseMsgDef);
+}
+
+
+
