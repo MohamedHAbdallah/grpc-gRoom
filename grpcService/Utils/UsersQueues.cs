@@ -29,7 +29,7 @@ public class UsersQueues
         _adminQueue.Enqueue(msg);
     }
 
-    public static ReceivedMessageDef GetMessageForUser(string user)
+    public static ReceivedMessageDef? GetMessageForUser(string user)
     {
         var userQueue = _queues.Where(q => q.User == user).First();
         if (userQueue.GetMessagesCount() > 0)
