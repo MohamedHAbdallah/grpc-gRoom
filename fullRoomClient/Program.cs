@@ -18,7 +18,9 @@ Console.WriteLine($"Joining room {room}...");
 
 try
 {
-    var joinResponse = clientRoomRegisteration.RegisterationToRoom(new RoomRegistrationRequestMsgDef() { RoomName = room, UserName = username });
+    var headers = new Grpc.Core.Metadata();
+    headers.Add("Authorization", "Bearer junfjdnkjdfkjmdf9jfndsjnfdw=");
+    var joinResponse = clientRoomRegisteration.RegisterationToRoom(new RoomRegistrationRequestMsgDef() { RoomName = room, UserName = username },deadline: DateTime.UtcNow.AddSeconds(5),headers: headers);
     if (joinResponse.Joined)
     {
         Console.WriteLine("Joined successfully!");
@@ -33,10 +35,17 @@ try
         return;
     }
 }
-catch (Exception ex)
+catch (Grpc.Core.RpcException ex)
 {
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine($"Error joining room {room}. Error: {ex.Message}");
+        Console.ForegroundColor = ConsoleColor.Red;
+    if (ex.StatusCode == Grpc.Core.StatusCode.DeadlineExceeded)
+    {
+        Console.WriteLine($"Timeout Exceeded when joining room {room}. please try again later.");
+    }
+    else
+    {
+        Console.WriteLine($"Error joining room {room}. Error: {ex.Message}");
+    }
     Console.ForegroundColor = ConsoleColor.Gray;
     Console.WriteLine("Press any key to close the window.");
     Console.Read();
@@ -60,14 +69,24 @@ var task = Task.Run(async () =>
 
     while (true)
     {
-        // TYPE HERE THE CODE FOR RECEIVING MESSAGES FROM THE SERVER
-        if (await call.ResponseStream.MoveNext(cts.Token))
+        try
         {
-            var msg = call.ResponseStream.Current;
-            var left = Console.CursorLeft - promptText.Length;
-            PrintMessage(msg);
+            // TYPE HERE THE CODE FOR RECEIVING MESSAGES FROM THE SERVER
+            if (await call.ResponseStream.MoveNext(cts.Token))
+            {
+                var msg = call.ResponseStream.Current;
+                var left = Console.CursorLeft - promptText.Length;
+                PrintMessage(msg);
+            }
+            await Task.Delay(1000);
+        }catch(Grpc.Core.RpcException ex)
+        {
+            if(ex.StatusCode == Grpc.Core.StatusCode.Cancelled)
+            {
+                Console.WriteLine("Cancelled!!");
+                break;
+            }
         }
-        await Task.Delay(1000);
     }
 });
 
@@ -76,15 +95,21 @@ while (true)
 {
     var input = Console.ReadLine();
     RestoreInputCursor();
-
-    // TYPE HERE THE CODE FOR SENDING MESSAGES TO THE SERVER
-    var reqMsg = new ChatMessageDef();
-    reqMsg.Contents = input;
-    reqMsg.MsgTime = Timestamp.FromDateTime(DateTime.UtcNow);
-    reqMsg.Room = room;
-    reqMsg.User = username;
-    call.RequestStream.WriteAsync(reqMsg);
-
+    if (input?.ToLower() == "x")
+    {
+        cts.Cancel();
+        Console.WriteLine("Chat Cancelled");
+    }
+    else
+    {
+        // TYPE HERE THE CODE FOR SENDING MESSAGES TO THE SERVER
+        var reqMsg = new ChatMessageDef();
+        reqMsg.Contents = input;
+        reqMsg.MsgTime = Timestamp.FromDateTime(DateTime.UtcNow);
+        reqMsg.Room = room;
+        reqMsg.User = username;
+        call.RequestStream.WriteAsync(reqMsg);
+    }
 }
 
 // Utilities methods for positioning the cursor

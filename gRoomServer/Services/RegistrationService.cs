@@ -11,10 +11,11 @@ public class RoomRegistrationService : RoomRegistrationServiceDef.RoomRegistrati
     {
         _logger = logger;
     }
-    public override Task<RoomRegistrationResponseMsgDef> RegisterationToRoom(RoomRegistrationRequestMsgDef request, ServerCallContext context)
+    public override async Task<RoomRegistrationResponseMsgDef> RegisterationToRoom(RoomRegistrationRequestMsgDef request, ServerCallContext context)
     {
+        //can read contex header check token sended
         UsersQueues.CreateUserQueue(request.RoomName, request.UserName);
         var res = new RoomRegistrationResponseMsgDef { Joined = true };
-        return Task.FromResult(res);
+        return await Task.FromResult(res);
     }
 }
